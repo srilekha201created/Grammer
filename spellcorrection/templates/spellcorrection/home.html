@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>
+            home
+            
+        </title>
+    </head>
+    <body>
+        <div>
+           <center>
+            <form method="POST" action="res">
+                {% csrf_token %}
+                <h1> Grammer Style,and Spell Checker</h1>
+                <br>
+                <textarea rows="20" cols="120" name="txt"></textarea><br><br>
+                <input  class="button secondary" type="submit" value="submit" style="font-size:20pt;color:white;background-color:green;border:3px solid #336600;padding:5px">>
+            </form>
+           </center>
+        </div>
+        <div>
+            <center>
+                {% if result %}
+                Input:<b>{{txt}}</b><br>
+                Result:<b>{{result}}</b>
+                {% endif %}
+            </center>
+        </div>
+    </body>
+</html>
