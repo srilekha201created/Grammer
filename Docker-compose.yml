@@ -1,1 +1,9 @@
-version :'0.1'services:web:build:command: python3 manage.py runserver 0.0.0.0:8000volume:-.:/appports:-"8000:8000"
+version :'0.1'
+services:
+web:
+build:
+command: python3 manage.py runserver 0.0.0.0:8000
+volume:
+-.:/app
+ports:
+-"8000:8000"
